@@ -36,4 +36,4 @@ console.log(hasPairWithSum([1, 2, 3, 9], 8)); // false
 console.log(hasPairWithSum([], 10)); // false
 
 //normal loop combined with if else
-//trying to usig .has but then change my mind, so the function name still remains unchanged. 
+//trying to use .has but then change my mind, so the function name still remains unchanged. 
