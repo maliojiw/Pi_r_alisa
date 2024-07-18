@@ -1,0 +1,39 @@
+function hasPairWithSum(array, target) {
+  array.sort((a, b) => a - b);
+
+
+  let left = 0;
+  let right = array.length - 1;
+
+
+  while (left < right) {
+    const sum = array[left] + array[right];
+
+
+    if (sum === target) {
+      return true;
+    }
+
+
+    if (sum < target) {
+      left++;
+    } else {
+      right--;
+    }
+  }
+
+
+  return false;
+}
+
+//test case by gpt
+console.log(hasPairWithSum([1, 3, 5, 7, 16, 4], 8)); // true
+console.log(hasPairWithSum([1, 3, 5, 7, 16, 4], 12)); // true
+console.log(hasPairWithSum([1, 3, 5, 7, 16, 4], 18)); // false
+console.log(hasPairWithSum([12, 17, 14, 11, 19, 8], 20)); // true
+console.log(hasPairWithSum([10, 15, 3, 7], 17)); // true
+console.log(hasPairWithSum([1, 2, 3, 9], 8)); // false
+console.log(hasPairWithSum([], 10)); // false
+
+//normal loop combined with if else
+//trying to usig .has but then change my mind, so the function name still remains unchanged. 
